@@ -5,3 +5,14 @@ plugins:
 title: [Evelyn YuJou]
 description: [Mon site personnel]
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Example</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Hello, World!</h1>
+  <p>This is a CSS example.</p>
+</body>
+</html>
