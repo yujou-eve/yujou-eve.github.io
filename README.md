@@ -1,7 +1,7 @@
-# Yujou
-Personal Website
-
+<!DOCTYPE html>
+<html>
 <head>
+  <title>Yujou - Personal Website</title>
   <link rel="stylesheet" href="styles.css"> <!-- Import the CSS stylesheet -->
 </head>
 <body>
@@ -36,7 +36,6 @@ Personal Website
     <h2>CNRS</h2>
     <p>
        CNRS (Centre national de la recherche scientifique).
-    
     </p>
   </section>
 
@@ -44,6 +43,3 @@ Personal Website
 
 </body>
 </html>
-
-
-
