@@ -1,23 +1,11 @@
-/* General Styles */
-body {
-  font-family: "Georgia", "Times New Roman", serif; /* Classic serif font */
-  color: #333; /* Dark gray text color */
-  background-color: #f0f0f0; /* Light gray background color */
-}
+remote_theme: pages-themes/cayman@v0.2.0
 
-/* Navigation Menu */
-nav {
-  background-color: #333; /* Dark gray menu background color */
-  padding: 10px; /* Menu inner padding */
-}
+plugins:
+- jekyll-remote-theme 
 
-ul {
-  list-style: none; /* Remove list item bullets */
-  margin: 0;
-  padding: 0;
-}
-
-li {
+title: [Evelyn YuJou]
+description: [Mon site personnel]
+css: /assets/css/styles.css
   display: inline-block; /* Horizontal arrangement of menu items */
   margin-right: 20px; /* Menu item spacing */
 }
