@@ -1,5 +1,5 @@
 # yujou-eve.github.io
-The files for my personal website
+Personal Website
 <!DOCTYPE html>
 <html>
 <head>
