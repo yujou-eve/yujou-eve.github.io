@@ -12,7 +12,8 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
+
+ <!-- Home Section -->
   <section id="home">
     <h2>Bienvenue sur mon site Web personnel</h2>
     <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
@@ -22,27 +23,6 @@
   <section id="profile">
     <h2>Profile</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture">
-    <p>
-     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-    </p>
-    <p>
-      I graduated from Université TungHai with a degree in Language and Literatures. 
-    </p>
-  </section>
-
-  <!-- CNRS Section -->
-  <section id="cnrs">
-    <h2>CNRS</h2>
-    <p>
-       CNRS (Centre national de la recherche scientifique).
-    </p>
-  </section>
-
-  <!-- Add more sections or content as needed -->
-
-</body>
-</html>
-
     <p>
      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
