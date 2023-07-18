@@ -1,6 +1,6 @@
 # yujou-eve.github.io
 Personal Website
-<!DOCTYPE html>
+
 <html>
 <head>
   <link rel="stylesheet" href="styles.css"> <!-- Import the CSS stylesheet -->
