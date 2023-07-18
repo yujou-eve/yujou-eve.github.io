@@ -15,8 +15,8 @@ Personal Website
 
   <!-- Home Section -->
   <section id="home">
-    <h2>Welcome to My Personal Website</h2>
-    <p>Hello, I'm [Your Name]. This is my personal website where I share my interests, projects, and experiences.</p>
+    <h2>Bienvenue sur mon site Web personnel</h2>
+    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
   </section>
 
   <!-- Profile Section -->
@@ -24,8 +24,7 @@ Personal Website
     <h2>Profile</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture">
     <p>
-      I am a [Your Profession/Role] with a passion for [Your Interests or Expertise]. I have [Years of Experience] in the field
-      and have worked on various projects that have enriched my skills.
+     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
     <p>
       I graduated from Université TungHai with a degree in Language and Literatures. 
