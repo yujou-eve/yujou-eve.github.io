@@ -57,6 +57,42 @@
     footer a:hover {
       text-decoration: underline;
     }
+
+    /* Navigation Menu Link Animations */
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 5px 10px;
+      position: relative;
+      transition: color 0.3s, top 0.3s;
+    }
+
+    nav ul li a:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      top: -2px;
+    }
+
+    nav ul li a:hover:before {
+      transform: scaleX(1);
+    }
   </style>
 </head>
 <body>
@@ -123,5 +159,6 @@
 
 </body>
 </html>
+
 
 
