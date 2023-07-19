@@ -150,6 +150,11 @@
     </div>
   </section>
 
+  <!-- Interactive Map Section -->
+  <section id="map" class="fade-in slide-up-on-hover">
+    <div id="world-map"></div>
+  </section>
+
   <!-- Add more sections or content as needed -->
 
   <footer>
@@ -157,6 +162,27 @@
     <p><a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
   </footer>
 
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('world-map').setView([0, 0], 2);
+
+    // Add the tile layer for the world map
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+    // Add markers and labels for the places you've been to
+    var places = [
+      // Example: Add the latitude and longitude of the places you've been to and their names
+      { lat: YOUR_LATITUDE, lon: YOUR_LONGITUDE, name: 'Place Name 1' },
+      { lat: YOUR_LATITUDE, lon: YOUR_LONGITUDE, name: 'Place Name 2' },
+      // Add more places as needed
+    ];
+
+    places.forEach(function(place) {
+      L.marker([place.lat, place.lon]).addTo(map).bindPopup(place.name);
+    });
+  </script>
 </body>
 </html>
 
