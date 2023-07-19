@@ -93,6 +93,56 @@
     nav ul li a:hover:before {
       transform: scaleX(1);
     }
+
+    /* Hero Banner Styling */
+    #hero-banner {
+      position: relative;
+      height: 400px;
+      background-image: url('your-hero-image.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #hero-banner h2 {
+      font-size: 36px;
+      color: #fff;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      animation: slideInFromTop 1s ease forwards;
+    }
+
+    @keyframes slideInFromTop {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    #hero-banner p {
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      margin: 10px 0 0;
+      padding: 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   </style>
 </head>
 <body>
@@ -108,10 +158,12 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="fade-in">
-    <h2>Bienvenue sur mon site Web personnel</h2>
-    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+  <!-- Hero Banner -->
+  <section id="hero-banner">
+    <div>
+      <h2 class="fade-in">Bienvenue sur mon site Web personnel</h2>
+      <p class="fade-in">Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+    </div>
   </section>
 
   <!-- Profile Section -->
@@ -138,11 +190,11 @@
   <section id="contact" class="fade-in slide-up-on-hover">
     <div class="contact-form">
       <h2>Contact Me</h2>
-      <form action="mailto:evelynting98@gmail.com" method="post" enctype="text/plain">
+      <form action="contact_form.php" method="post">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
+        <input type="email" id="email" name="email" required>
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
         <input type="submit" value="Send Message">
