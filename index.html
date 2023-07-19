@@ -6,36 +6,53 @@
   <style>
     /* ... Your existing CSS styles ... */
 
-    /* Subtle Fade-in Animation */
-    .fade-in {
-      opacity: 0;
-      animation: fadeInAnimation 1s ease forwards;
+    /* Contact Form Styling */
+    .contact-form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #f8f8f8;
     }
 
-    @keyframes fadeInAnimation {
-      to {
-        opacity: 1;
-      }
+    .contact-form h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
     }
 
-    /* Subtle Scale on Hover Animation */
-    .scale-on-hover {
-      transition: transform 0.3s ease;
+    .contact-form label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
     }
 
-    .scale-on-hover:hover {
-      transform: scale(1.05);
+    .contact-form input[type="text"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
 
-    /* Subtle Slide-up on Hover Animation */
-    .slide-up-on-hover {
-      position: relative;
-      top: 0;
-      transition: top 0.3s ease;
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 100px;
     }
 
-    .slide-up-on-hover:hover {
-      top: -5px;
+    .contact-form input[type="submit"] {
+      background-color: #222;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #444;
     }
   </style>
 </head>
@@ -63,7 +80,7 @@
     <h2 class="scale-on-hover">Profile</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
-     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
     <p>
       I graduated from Université TungHai with a degree in Language and Literatures. 
@@ -74,8 +91,24 @@
   <section id="cnrs" class="fade-in slide-up-on-hover">
     <h2 class="scale-on-hover">CNRS</h2>
     <p>
-       CNRS (Centre national de la recherche scientifique).
+      CNRS (Centre national de la recherche scientifique).
     </p>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="fade-in slide-up-on-hover">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="mailto:evelynting98@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
   </section>
 
   <!-- Add more sections or content as needed -->
@@ -87,3 +120,4 @@
 
 </body>
 </html>
+
