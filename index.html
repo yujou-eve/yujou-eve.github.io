@@ -6,43 +6,94 @@
   <style>
     /* ... Your existing CSS styles ... */
 
-    /* Add this class to elements that will animate when in view */
-    .animate-in-view {
+    /* Subtle Fade-in Animation */
+    .fade-in {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
+      animation: fadeInAnimation 1s ease forwards;
     }
 
-    .in-view {
-      opacity: 1;
-      transform: translateY(0);
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
+    }
+
+    /* Subtle Scale on Hover Animation */
+    .scale-on-hover {
+      transition: transform 0.3s ease;
+    }
+
+    .scale-on-hover:hover {
+      transform: scale(1.05);
+    }
+
+    /* Subtle Slide-up on Hover Animation */
+    .slide-up-on-hover {
+      position: relative;
+      top: 0;
+      transition: top 0.3s ease;
+    }
+
+    .slide-up-on-hover:hover {
+      top: -5px;
+    }
+
+    /* Footer Styling */
+    footer {
+      background-color: #222;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      margin-top: 40px; /* Add space between the last section and the footer */
+    }
+
+    /* Footer Link Styling */
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Navigation Menu Link Animations */
+    nav ul li {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #ccc;
+      text-decoration: none;
+      padding: 5px 10px;
+      position: relative;
+      transition: color 0.3s, top 0.3s;
+    }
+
+    nav ul li a:before {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #ccc;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #fff;
+      top: -2px;
+    }
+
+    nav ul li a:hover:before {
+      transform: scaleX(1);
     }
   </style>
-  <script>
-    // Function to check if an element is in view
-    function isInView(element) {
-      var rect = element.getBoundingClientRect();
-      return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-      );
-    }
-
-    // Function to handle scroll event
-    function handleScroll() {
-      var elements = document.querySelectorAll('.animate-in-view');
-      elements.forEach(function (element) {
-        if (isInView(element)) {
-          element.classList.add('in-view');
-        }
-      });
-    }
-
-    // Event listener for scroll
-    window.addEventListener('scroll', handleScroll);
-  </script>
 </head>
 <body>
   <header class="fade-in">
@@ -57,16 +108,14 @@
     </ul>
   </nav>
 
-  <!-- Hero Banner -->
-  <section id="hero-banner" class="fade-in slide-up-on-hover animate-in-view">
-    <div>
-      <h2>Bienvenue sur mon site Web personnel</h2>
-      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
-    </div>
+  <!-- Home Section -->
+  <section id="home" class="fade-in">
+    <h2>Bienvenue sur mon site Web personnel</h2>
+    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" class="fade-in slide-up-on-hover animate-in-view">
+  <section id="profile" class="fade-in slide-up-on-hover">
     <h2 class="scale-on-hover">Profile</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
@@ -78,7 +127,7 @@
   </section>
 
   <!-- CNRS Section -->
-  <section id="cnrs" class="fade-in slide-up-on-hover animate-in-view">
+  <section id="cnrs" class="fade-in slide-up-on-hover">
     <h2 class="scale-on-hover">CNRS</h2>
     <p>
        CNRS (Centre national de la recherche scientifique).
@@ -86,7 +135,7 @@
   </section>
 
   <!-- Contact Me Section -->
-  <section id="contact" class="fade-in slide-up-on-hover animate-in-view">
+  <section id="contact" class="fade-in slide-up-on-hover">
     <div class="contact-form">
       <h2>Contact Me</h2>
       <form action="mailto:evelynting98@gmail.com" method="post" enctype="text/plain">
@@ -110,6 +159,7 @@
 
 </body>
 </html>
+
 
 
 
