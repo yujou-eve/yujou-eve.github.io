@@ -6,53 +6,56 @@
   <style>
     /* ... Your existing CSS styles ... */
 
-    /* Contact Form Styling */
-    .contact-form {
-      max-width: 400px;
-      margin: 0 auto;
-      padding: 20px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      background-color: #f8f8f8;
+    /* Subtle Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 1s ease forwards;
     }
 
-    .contact-form h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
     }
 
-    .contact-form label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 5px;
+    /* Subtle Scale on Hover Animation */
+    .scale-on-hover {
+      transition: transform 0.3s ease;
     }
 
-    .contact-form input[type="text"],
-    .contact-form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    .scale-on-hover:hover {
+      transform: scale(1.05);
     }
 
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 100px;
+    /* Subtle Slide-up on Hover Animation */
+    .slide-up-on-hover {
+      position: relative;
+      top: 0;
+      transition: top 0.3s ease;
     }
 
-    .contact-form input[type="submit"] {
+    .slide-up-on-hover:hover {
+      top: -5px;
+    }
+
+    /* Footer Styling */
+    footer {
       background-color: #222;
+      padding: 20px;
+      text-align: center;
       color: #fff;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      font-size: 14px;
+      margin-top: 40px; /* Add space between the last section and the footer */
     }
 
-    .contact-form input[type="submit"]:hover {
-      background-color: #444;
+    /* Footer Link Styling */
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -80,7 +83,7 @@
     <h2 class="scale-on-hover">Profile</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
-      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
     <p>
       I graduated from Université TungHai with a degree in Language and Literatures. 
@@ -91,11 +94,11 @@
   <section id="cnrs" class="fade-in slide-up-on-hover">
     <h2 class="scale-on-hover">CNRS</h2>
     <p>
-      CNRS (Centre national de la recherche scientifique).
+       CNRS (Centre national de la recherche scientifique).
     </p>
   </section>
 
-  <!-- Contact Form Section -->
+  <!-- Contact Me Section -->
   <section id="contact" class="fade-in slide-up-on-hover">
     <div class="contact-form">
       <h2>Contact Me</h2>
@@ -113,11 +116,12 @@
 
   <!-- Add more sections or content as needed -->
 
-  <footer class="fade-in">
+  <footer>
     <p>&copy; 2023 YuJou. All rights reserved.</p>
-    <p><a href="https://yujou-eve.github.io" target="_blank" class="scale-on-hover">Visit our website</a></p>
+    <p><a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
   </footer>
 
 </body>
 </html>
+
 
