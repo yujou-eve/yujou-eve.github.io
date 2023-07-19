@@ -4,63 +4,64 @@
   <title>Yujou - Personal Website</title>
   <link rel="stylesheet" href="style.css"> 
   <style>
-    /* Header Styling */
-    header {
-      background-color: #222;
-      padding: 20px;
-      text-align: center;
+    /* ... Your existing CSS styles ... */
+
+    /* Subtle Fade-in Animation */
+    .fade-in {
+      opacity: 0;
+      animation: fadeInAnimation 1s ease forwards;
     }
 
-    h1 {
-      font-family: "Arial", sans-serif;
-      color: #fff;
-      margin: 0;
+    @keyframes fadeInAnimation {
+      to {
+        opacity: 1;
+      }
     }
 
-    /* Footer Styling */
-    footer {
-      background-color: #222;
-      padding: 20px;
-      text-align: center;
-      color: #fff;
-      font-size: 14px;
-      margin-top: 40px; /* Add space between the last section and the footer */
+    /* Subtle Scale on Hover Animation */
+    .scale-on-hover {
+      transition: transform 0.3s ease;
     }
 
-    /* Footer Link Styling */
-    footer a {
-      color: #fff;
-      text-decoration: none;
+    .scale-on-hover:hover {
+      transform: scale(1.05);
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    /* Subtle Slide-up on Hover Animation */
+    .slide-up-on-hover {
+      position: relative;
+      top: 0;
+      transition: top 0.3s ease;
+    }
+
+    .slide-up-on-hover:hover {
+      top: -5px;
     }
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in">
     <h1>YuJou</h1>
   </header>
 
   <nav>
     <ul>
-      <li><a href="https://yujou-eve.github.io/">Home</a></li>
-      <li><a href="https://yujou-eve.github.io/profile">Profile</a></li>
-      <li><a href="https://yujou-eve.github.io/CV">CV</a></li>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Home</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profile</a></li>
+      <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
     </ul>
   </nav>
 
   <!-- Home Section -->
-  <section id="home">
+  <section id="home" class="fade-in">
     <h2>Bienvenue sur mon site Web personnel</h2>
     <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
   </section>
 
   <!-- Profile Section -->
-  <section id="profile">
-    <h2>Profile</h2>
-    <img src="your-profile-image.jpg" alt="Your Profile Picture">
+  <section id="profile" class="fade-in slide-up-on-hover">
+    <h2 class="scale-on-hover">Profile</h2>
+    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
@@ -70,8 +71,8 @@
   </section>
 
   <!-- CNRS Section -->
-  <section id="cnrs">
-    <h2>CNRS</h2>
+  <section id="cnrs" class="fade-in slide-up-on-hover">
+    <h2 class="scale-on-hover">CNRS</h2>
     <p>
        CNRS (Centre national de la recherche scientifique).
     </p>
@@ -79,11 +80,10 @@
 
   <!-- Add more sections or content as needed -->
 
-  <footer>
+  <footer class="fade-in">
     <p>&copy; 2023 YuJou. All rights reserved.</p>
-    <p><a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
+    <p><a href="https://yujou-eve.github.io" target="_blank" class="scale-on-hover">Visit our website</a></p>
   </footer>
 
 </body>
 </html>
-
