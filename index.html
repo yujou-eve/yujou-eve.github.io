@@ -1,8 +1,26 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Yujou - Personal Website</title>
   <link rel="stylesheet" href="style.css"> 
   <style>
+    /* ... existing CSS styles ... */
+
+    /* Additional CSS for Enhanced Styling */
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Styling for Header */
+    header {
+      background-color: #007BFF;
+      color: #fff;
+      text-align: center;
+      padding: 30px 0;
+      animation: fadeInAnimation 1s ease forwards;
+    }
+
     /* ... existing CSS styles ... */
 
     /* Subtle Fade-in Animation */
@@ -17,80 +35,58 @@
       }
     }
 
-    /* Subtle Scale on Hover Animation */
-    .scale-on-hover {
-      transition: transform 0.3s ease;
+    /* ... existing CSS styles ... */
+
+    /* Styling for Navigation Menu */
+    nav {
+      background-color: #f5f5f5;
+      padding: 10px 0;
+      text-align: center;
     }
 
-    .scale-on-hover:hover {
-      transform: scale(1.05);
+    /* ... existing CSS styles ... */
+
+    /* Styling for Home Section */
+    #home {
+      background-color: #fff;
+      padding: 40px;
+      text-align: center;
     }
 
-    /* Subtle Slide-up on Hover Animation */
-    .slide-up-on-hover {
-      position: relative;
-      top: 0;
-      transition: top 0.3s ease;
+    /* ... existing CSS styles ... */
+
+    /* Styling for Profile Section */
+    #profile {
+      background-color: #f5f5f5;
+      padding: 40px;
+      text-align: center;
     }
 
-    .slide-up-on-hover:hover {
-      top: -5px;
+    #profile img {
+      max-width: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
     }
 
-    /* Footer Styling */
+    /* ... existing CSS styles ... */
+
+    /* Styling for Footer */
     footer {
-      background-color: #222;
+      background-color: #007BFF;
+      color: #fff;
       padding: 20px;
       text-align: center;
-      color: #fff;
       font-size: 14px;
-      margin-top: 40px; /* Add space between the last section and the footer */
     }
 
-    /* Footer Link Styling */
     footer a {
       color: #fff;
       text-decoration: none;
+      transition: opacity 0.3s;
     }
 
     footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* Navigation Menu Link Animations */
-    nav ul li {
-      display: inline-block;
-      margin-right: 20px;
-    }
-
-    nav ul li a {
-      color: #ccc;
-      text-decoration: none;
-      padding: 5px 10px;
-      position: relative;
-      transition: color 0.3s, top 0.3s;
-    }
-
-    nav ul li a:before {
-      content: "";
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: #ccc;
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.3s;
-    }
-
-    nav ul li a:hover {
-      color: #fff;
-      top: -2px;
-    }
-
-    nav ul li a:hover:before {
-      transform: scaleX(1);
+      opacity: 0.7;
     }
   </style>
 </head>
@@ -101,8 +97,8 @@
 
   <nav>
     <ul>
-      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Home</a></li>
-      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profile</a></li>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Accueil</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profil</a></li>
       <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
     </ul>
   </nav>
@@ -115,7 +111,7 @@
 
   <!-- Profile Section -->
   <section id="profile" class="fade-in slide-up-on-hover">
-    <h2 class="scale-on-hover">Profile</h2>
+    <h2 class="scale-on-hover">Profil</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
@@ -134,29 +130,23 @@
   </section>
 
   <!-- Contact Me Section -->
-  
-<section id="contact" class="fade-in slide-up-on-hover">
-  <div class="contact-form">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/mpzgwpoj" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-      <input type="submit" value="Send Message">
-    </form>
-  </div>
-</section>
-
-
-
-
+  <section id="contact" class="fade-in slide-up-on-hover">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mpzgwpoj" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2023 YuJou. All rights reserved.</p>
-    <p><a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
+    <p>&copy; 2023 YuJou. All rights reserved. | <a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
   </footer>
 
 </body>
