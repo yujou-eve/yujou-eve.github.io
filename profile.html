@@ -2,12 +2,56 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css"> <!-- Import the CSS stylesheet -->
+  <style>
+    /* Add some styling for the profile page */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .quote {
+      font-style: italic;
+      color: #888;
+    }
+
+    .interests {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 </head>
-  ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
-collection: portfolio
----
+
 <body>
   <nav>
     <ul>
@@ -15,10 +59,48 @@ collection: portfolio
       <li><a href="https://yujou-eve.github.io/profile">Profile</a></li>
       <li><a href="https://yujou-eve.github.io/CV">CV</a></li>
     </ul>
-    
   </nav>
-  test page for profile
+
+  <h1>John Doe</h1>
+  <img src="your_photo.jpg" alt="John Doe">
+
+  <h2>About Me</h2>
+  <p>
+    Welcome to my personal website! I am a passionate and dedicated individual seeking new opportunities in the field of Computer Science.
+  </p>
+
+  <h2>Education</h2>
+  <table>
+    <tr>
+      <th>Degree</th>
+      <th>University</th>
+      <th>Year</th>
+    </tr>
+    <tr>
+      <td>Bachelor of Science in Computer Science</td>
+      <td>XYZ University</td>
+      <td>2018 - 2022</td>
+    </tr>
+  </table>
+
+  <h2>Skills</h2>
+  <ul>
+    <li>Programming Languages: Python, JavaScript, Java</li>
+    <li>Web Development: HTML/CSS, React, Node.js</li>
+    <li>Database: MySQL, MongoDB</li>
+  </ul>
+
+  <h2>Quote</h2>
+  <p class="quote">"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
+
+  <h2>Interests</h2>
+  <p class="interests">I have a strong interest in artificial intelligence and its applications in solving real-world problems. In my free time, I enjoy hiking and photography.</p>
+
+  <h2>Contact</h2>
+  <p>Email: john.doe@example.com</p>
+  <p>Phone: +1 123-456-7890</p>
 </body>
 </html>
+
 
 
