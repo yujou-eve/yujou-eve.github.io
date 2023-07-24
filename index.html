@@ -150,7 +150,63 @@
   </style>
 </head>
 <body>
-  <!-- ... existing HTML content ... -->
+  <header class="fade-in">
+    <h1>YuJou</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Accueil</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profil</a></li>
+      <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
+    </ul>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="fade-in">
+    <h2>Bienvenue sur mon site Web personnel</h2>
+    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+  </section>
+
+  <!-- Profile Section -->
+  <section id="profile" class="fade-in slide-up-on-hover">
+    <h2 class="scale-on-hover">Profil</h2>
+    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
+    <p>
+     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+    </p>
+    <p>
+      I graduated from Université TungHai with a degree in Language and Literatures. 
+    </p>
+  </section>
+
+  <!-- CNRS Section -->
+  <section id="cnrs" class="fade-in slide-up-on-hover">
+    <h2 class="scale-on-hover">CNRS</h2>
+    <p>
+       CNRS (Centre national de la recherche scientifique).
+    </p>
+  </section>
+
+  <!-- Contact Me Section -->
+  <section id="contact" class="fade-in slide-up-on-hover">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mpzgwpoj" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 YuJou. Tous droits réservés.</p>
+  </footer>
 
 </body>
 </html>
