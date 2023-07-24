@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css"> <!-- Import the CSS stylesheet -->
+  <title>Yujou - Personal Website</title>
+  <link rel="stylesheet" href="style.css"> 
   <style>
-    /* Add some styling for the profile page */
+    /* ... existing CSS styles ... */
+
+    /* Additional CSS for Profile Page */
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
@@ -32,75 +35,86 @@
       background-color: #f2f2f2;
     }
 
-    img {
-      max-width: 100%;
+    img.profile-picture {
+      max-width: 200px;
       height: auto;
       border-radius: 50%;
-      margin-bottom: 20px;
+      margin: 20px auto;
+      display: block;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
     }
 
-    .quote {
-      font-style: italic;
-      color: #888;
-    }
-
-    .interests {
+    .profile-description {
       font-style: italic;
       color: #555;
     }
   </style>
 </head>
-
 <body>
+  <header class="fade-in">
+    <h1>YuJou</h1>
+  </header>
+
   <nav>
     <ul>
-      <li><a href="https://yujou-eve.github.io/">Home</a></li>
-      <li><a href="https://yujou-eve.github.io/profile">Profile</a></li>
-      <li><a href="https://yujou-eve.github.io/CV">CV</a></li>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Home</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profile</a></li>
+      <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
     </ul>
   </nav>
 
-  <h1>John Doe</h1>
-  <img src="your_photo.jpg" alt="John Doe">
+  <!-- Profile Section -->
+  <section id="profile" class="fade-in slide-up-on-hover">
+    <h2 class="scale-on-hover">Profile</h2>
+    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="profile-picture scale-on-hover">
+    <table>
+      <tr>
+        <th>Name</th>
+        <td>YuJou, Ting</td>
+      </tr>
+      <tr>
+        <th>Education</th>
+        <td>Université TungHai</td>
+      </tr>
+      <tr>
+        <th>Major</th>
+        <td>Language and Literatures</td>
+      </tr>
+      <tr>
+        <th>Internship</th>
+        <td>CNRS (Centre national de la recherche scientifique)</td>
+      </tr>
+    </table>
+    <p class="profile-description">
+      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+      I graduated from Université TungHai with a degree in Language and Literatures. 
+    </p>
+  </section>
 
-  <h2>About Me</h2>
-  <p>
-    Welcome to my personal website! I am a passionate and dedicated individual seeking new opportunities in the field of Computer Science.
-  </p>
+  <!-- Contact Me Section -->
+  <section id="contact" class="fade-in slide-up-on-hover">
+    <div class="contact-form">
+      <h2>Contact Me</h2>
+      <form action="https://formspree.io/f/mpzgwpoj" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Send Message">
+      </form>
+    </div>
+  </section>
 
-  <h2>Education</h2>
-  <table>
-    <tr>
-      <th>Degree</th>
-      <th>University</th>
-      <th>Year</th>
-    </tr>
-    <tr>
-      <td>Bachelor of Science in Computer Science</td>
-      <td>XYZ University</td>
-      <td>2018 - 2022</td>
-    </tr>
-  </table>
+  <footer>
+    <p>&copy; 2023 YuJou. All rights reserved.</p>
+    <p><a href="https://yujou-eve.github.io" target="_blank">Visit our website</a></p>
+  </footer>
 
-  <h2>Skills</h2>
-  <ul>
-    <li>Programming Languages: Python, JavaScript, Java</li>
-    <li>Web Development: HTML/CSS, React, Node.js</li>
-    <li>Database: MySQL, MongoDB</li>
-  </ul>
-
-  <h2>Quote</h2>
-  <p class="quote">"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
-
-  <h2>Interests</h2>
-  <p class="interests">I have a strong interest in artificial intelligence and its applications in solving real-world problems. In my free time, I enjoy hiking and photography.</p>
-
-  <h2>Contact</h2>
-  <p>Email: john.doe@example.com</p>
-  <p>Phone: +1 123-456-7890</p>
 </body>
 </html>
+
 
 
 
