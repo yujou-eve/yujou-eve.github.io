@@ -2,6 +2,58 @@
 <html>
 <head>
   <link rel="stylesheet" href="style.css"> <!-- Import the CSS stylesheet -->
+  <style>
+    /* Add some styling for the CV page */
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 30px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .skill-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skill-list li {
+      margin-bottom: 10px;
+    }
+
+    .cv-section {
+      margin-bottom: 30px;
+    }
+
+    .cv-section h2 {
+      margin-bottom: 10px;
+    }
+
+    .cv-section p {
+      font-style: italic;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -11,6 +63,76 @@
       <li><a href="https://yujou-eve.github.io/CV">CV</a></li>
     </ul>
   </nav>
-  test page for CV
+
+  <h1>John Doe's CV</h1>
+
+  <div class="cv-section">
+    <h2>Education</h2>
+    <table>
+      <tr>
+        <th>Degree</th>
+        <th>University</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Bachelor of Science in Computer Science</td>
+        <td>XYZ University</td>
+        <td>2018 - 2022</td>
+      </tr>
+      <tr>
+        <td>Master of Science in Computer Science</td>
+        <td>ABC University</td>
+        <td>2022 - 2024</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="cv-section">
+    <h2>Work Experience</h2>
+    <table>
+      <tr>
+        <th>Position</th>
+        <th>Company</th>
+        <th>Year</th>
+      </tr>
+      <tr>
+        <td>Software Engineer Intern</td>
+        <td>XYZ Tech</td>
+        <td>Summer 2021</td>
+      </tr>
+      <tr>
+        <td>Software Developer</td>
+        <td>ABC Solutions</td>
+        <td>2022 - Present</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="cv-section">
+    <h2>Skills</h2>
+    <ul class="skill-list">
+      <li>Programming Languages: Python, JavaScript, Java</li>
+      <li>Web Development: HTML/CSS, React, Node.js</li>
+      <li>Database: MySQL, MongoDB</li>
+      <li>Machine Learning: TensorFlow, PyTorch</li>
+    </ul>
+  </div>
+
+  <div class="cv-section">
+    <h2>Awards and Achievements</h2>
+    <p>
+      - Outstanding Graduate Award, XYZ University (2022)
+      <br>
+      - First Prize in Programming Competition (2020)
+      <br>
+      - Published Paper in International Conference on Computer Science (2021)
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 John Doe. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
+
