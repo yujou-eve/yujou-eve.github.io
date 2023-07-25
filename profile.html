@@ -6,9 +6,15 @@
   <style>
     /* Additional CSS for Profile Page */
     body {
+      font-family: Arial, sans-serif;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     table {
@@ -39,6 +45,24 @@
     .profile-description {
       font-style: italic;
       color: #555;
+    }
+
+    /* Additional CSS for Hover Effect */
+    #profile:hover {
+      background-color: #F0F4F8; /* Pale Blue */
+      color: #333; /* Dark Gray */
+    }
+
+    #profile:hover img.profile-picture {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.3);
+    }
+
+    #profile:hover h2.scale-on-hover {
+      color: #333; /* Dark Gray */
+    }
+
+    #profile:hover .profile-description {
+      color: #333; /* Dark Gray */
     }
   </style>
 </head>
@@ -106,5 +130,4 @@
 
 </body>
 </html>
-
 
