@@ -243,3 +243,18 @@
     </tr>
   </table>
 </div>
+  <footer class="fade-in-on-load">
+    <p>&copy; 2023 Yu-Jou. Tous droits réservés.</p>
+  </footer>
+
+  <script>
+    // 等待整個頁面載入完畢後再執行
+    window.onload = function () {
+      // 取得 body 元素
+      const body = document.querySelector("body");
+      // 將 body 的透明度從 0 淡入到 1，用時 1 秒
+      body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
+    };
+  </script>
+</body>
+</html>
