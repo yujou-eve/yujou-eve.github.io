@@ -15,6 +15,7 @@
       font-family: "Montserrat", sans-serif;
       color: #333; /* Dark Gray */
       background-color: rgba(255, 255, 255, 0.5); /* 透明淡淡的白色背景 */
+      opacity: 0; /* 頁面進場時先設定透明度為0，待動畫播放時再淡入 */
     }
 
     /* ... existing CSS styles ... */
@@ -38,6 +39,20 @@
     }
 
     @keyframes fadeInOnLoadAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Additional CSS for Slide In Animation */
+    .slide-in-animation {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInAnimation 1s ease forwards;
+    }
+
+    @keyframes slideInAnimation {
       to {
         opacity: 1;
         transform: translateY(0);
@@ -156,13 +171,6 @@
   </style>
 </head>
 <body>
-  <!-- ... 其他 HTML 內容 ... -->
-</body>
-</html>
-
-  </style>
-</head>
-<body>
   <header class="fade-in-on-load">
     <h1>YuJou</h1>
     <p>Welcome to my Personal Website</p>
@@ -177,7 +185,7 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="fade-in-on-load">
+  <section id="home" class="fade-in-on-load slide-in-animation">
     <div class="content">
       <h2>Bienvenue sur mon site Web personnel</h2>
       <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
@@ -224,5 +232,14 @@
     <p>&copy; 2023 YuJou. Tous droits réservés.</p>
   </footer>
 
+  <script>
+    // 等待整個頁面載入完畢後再執行
+    window.onload = function () {
+      // 取得 body 元素
+      const body = document.querySelector("body");
+      // 將 body 的透明度從 0 淡入到 1，用時 1 秒
+      body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
+    };
+  </script>
 </body>
 </html>
