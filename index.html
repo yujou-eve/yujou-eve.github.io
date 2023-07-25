@@ -3,13 +3,14 @@
 <head>
   <title>Yujou - Personal Website</title>
   <link rel="stylesheet" href="style.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
   <style>
     /* ... existing CSS styles ... */
 
     /* Additional CSS for Enhanced Styling */
     body {
       background-color: #F0F4F8; /* Pale Blue */
-      font-family: "Times New Roman", Times, serif;
+      font-family: "Montserrat", sans-serif;
     }
 
     /* ... existing CSS styles ... */
@@ -26,26 +27,16 @@
     /* ... existing CSS styles ... */
 
     /* Additional CSS for Animations */
-    .slide-up-on-load {
-      position: relative;
-      top: 10px;
-      animation: slideUpAnimation 1s ease forwards;
-    }
-
-    @keyframes slideUpAnimation {
-      to {
-        top: 0;
-      }
-    }
-
     .fade-in-on-load {
       opacity: 0;
+      transform: translateY(10px);
       animation: fadeInOnLoadAnimation 1s ease forwards;
     }
 
     @keyframes fadeInOnLoadAnimation {
       to {
         opacity: 1;
+        transform: translateY(0);
       }
     }
 
@@ -150,7 +141,7 @@
   </style>
 </head>
 <body>
-  <header class="fade-in">
+  <header class="fade-in-on-load">
     <h1>YuJou</h1>
   </header>
 
@@ -163,17 +154,17 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="fade-in">
+  <section id="home" class="fade-in-on-load">
     <h2>Bienvenue sur mon site Web personnel</h2>
     <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
   </section>
 
   <!-- Profile Section -->
-  <section id="profile" class="fade-in slide-up-on-hover">
+  <section id="profile" class="fade-in-on-load">
     <h2 class="scale-on-hover">Profil</h2>
     <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <p>
-     Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
     </p>
     <p>
       I graduated from Université TungHai with a degree in Language and Literatures. 
@@ -181,15 +172,15 @@
   </section>
 
   <!-- CNRS Section -->
-  <section id="cnrs" class="fade-in slide-up-on-hover">
+  <section id="cnrs" class="fade-in-on-load">
     <h2 class="scale-on-hover">CNRS</h2>
     <p>
-       CNRS (Centre national de la recherche scientifique).
+      CNRS (Centre national de la recherche scientifique).
     </p>
   </section>
 
   <!-- Contact Me Section -->
-  <section id="contact" class="fade-in slide-up-on-hover">
+  <section id="contact" class="fade-in-on-load">
     <div class="contact-form">
       <h2>Contact Me</h2>
       <form action="https://formspree.io/f/mpzgwpoj" method="post">
@@ -210,5 +201,6 @@
 
 </body>
 </html>
+
 
 
