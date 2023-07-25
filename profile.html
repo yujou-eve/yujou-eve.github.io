@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Yujou - Site Web Personnel</title>
-  <link rel="stylesheet" href="style.css"> 
+  <title>Yujou - CV</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     /* ... existing CSS styles ... */
 
-    /* Additional CSS for Profile Page */
+    /* Additional CSS for CV Page */
     body {
       font-family: "Montserrat", sans-serif;
       max-width: 800px;
@@ -72,38 +72,50 @@
     
     /* ... existing CSS styles ... */
 
-    /* Styling for Home Section */
-    #home, #profile {
+    /* Styling for CV Sections */
+    .cv-section {
       padding: 40px;
-      text-align: center;
       position: relative;
       z-index: 1;
+      margin-bottom: 20px;
+      background-color: #FFFFFF; /* White */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
 
-    #home h2, #profile h2 {
+    .cv-section h2 {
       font-size: 36px;
       color: #333; /* Dark Gray */
+      margin-bottom: 20px;
     }
 
-    #home p, #profile p {
-      font-size: 18px;
-      color: #555; /* Medium Gray */
+    /* Custom Styles for Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
     }
 
-    /* ... existing CSS styles ... */
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
 
-    /* Additional CSS for Hover Effect on Sections */
-    #home:hover, #profile:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
-      transform: scale(1.02); /* 略微放大 */
-      transition: box-shadow 0.3s, transform 0.3s; /* 加入平滑過渡效果 */
+    th {
+      background-color: #f2f2f2;
+    }
+
+    /* Style for List Items */
+    .cv-section ul {
+      list-style: square;
     }
   </style>
 </head>
 <body>
   <header class="fade-in-on-load">
     <h1>YuJou</h1>
-    <p>Welcome to my Personal Website</p>
+    <p>Welcome to my CV Page</p>
   </header>
 
   <nav>
@@ -114,61 +126,92 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
-  <section id="home" class="fade-in-on-load slide-in-animation">
-    <div class="content">
-      <h2>Bienvenue sur mon site Web personnel</h2>
-      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
-    </div>
-  </section>
-
-  <!-- Profile Section -->
-  <section id="profile" class="fade-in-on-load slide-in-animation">
-    <h2 class="scale-on-hover">Profil</h2>
-    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
+  <!-- CV Section: Formation -->
+  <div class="cv-section fade-in-on-load slide-in-animation">
+    <h2>Formation</h2>
     <table>
       <tr>
-        <th>Nom</th>
-        <td>YuJou, Ting</td>
+        <th>Diplôme</th>
+        <th>Université</th>
+        <th>Année</th>
       </tr>
       <tr>
-        <th>Éducation</th>
+        <td>Licence en Langues et Littératures</td>
         <td>Université TungHai</td>
+        <td>2023</td>
       </tr>
       <tr>
-        <th>Majeure</th>
-        <td>Langues et Littératures</td>
-      </tr>
-      <tr>
-        <th>Stage</th>
-        <td>CNRS (Centre national de la recherche scientifique)</td>
+        <td>Étudiante en langues et littératures</td>
+        <td>Université de Tunghai</td>
+        <td>2019-2023</td>
       </tr>
     </table>
-    <p class="profile-description">
-      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-      J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
+  </div>
+
+  <!-- CV Section: Expérience Professionnelle -->
+  <div class="cv-section fade-in-on-load slide-in-animation">
+    <h2>Expérience Professionnelle</h2>
+    <table>
+      <tr>
+        <th>Poste</th>
+        <th>Entreprise</th>
+        <th>Année</th>
+      </tr>
+      <tr>
+        <td>Stagiaire</td>
+        <td>CNRS (Centre national de la recherche scientifique)</td>
+        <td>2023</td>
+      </tr>
+      <tr>
+        <td>Inspectrice Qualité et Service</td>
+        <td>MIMIC Company</td>
+        <td>2021-Présent</td>
+      </tr>
+      <tr>
+        <td>Stagiaire</td>
+        <td>School of Rock</td>
+        <td>Été 2021</td>
+      </tr> 
+    </table>
+  </div>
+
+  <!-- CV Section: Compétences -->
+  <div class="cv-section fade-in-on-load slide-in-animation">
+    <h2>Compétences</h2>
+    <ul class="skill-list">
+      <li>Langues : Français, Anglais</li>
+      <li>Développement Web : HTML/CSS</li>
+      <li>Bases de données : R programming</li>
+      <li>Musique : Violon, Piano</li>
+    </ul>
+  </div>
+
+  <!-- CV Section: Récompenses et Réalisations -->
+  <div class="cv-section fade-in-on-load slide-in-animation">
+    <h2>Récompenses et Réalisations</h2>
+    <p>
+      - Première place dans le département, Thunghai Université (2022)
+      <br>
+      - 格式保留 (2020)
+      <br>
+      - 要想一下 (2021)
     </p>
-  </section>
+  </div>
 
-  <!-- Contact Me Section -->
-  <section id="contact" class="fade-in slide-up-on-hover">
-    <div class="contact-form">
-      <h2>Contactez-moi</h2>
-      <form action="https://formspree.io/f/mpzgwpoj" method="post">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
-        <input type="submit" value="Envoyer le Message">
-      </form>
-    </div>
-  </section>
+  <!-- CV Section: Expériences -->
+  <div class="cv-section fade-in-on-load slide-in-animation">
+    <h2>Expériences</h2>
+    <ul>
+      <li>Échange linguistique à Montpellier, France | 07.2023—09.2023</li>
+      <li>Ambassadrice du Département des Arts | 06.2021—Présent</li>
+      <li>Organisatrice et participante à des échanges linguistiques et culturels à Montréal | 06.2022 - 09.2022</li>
+      <li>Participante au Camp d'Entraînement au Leadership à l'Université de la Colombie-Britannique | 07.2021-09.2021</li>
+      <li>Étudiante en Échange à l'Université du Queensland | 01.2020-04.2020</li>
+    </ul>
+  </div>
 
-  <footer>
-    <p>&copy; 2023 YuJou. Tous droits réservés.</p>
-    <p><a href="https://yujou-eve.github.io" target="_blank">Visitez notre site Web</a></p>
+  <footer class="fade-in-on-load">
+    <p>&copy; 2023 Yu-Jou. Tous droits réservés.</p>
   </footer>
 
   <script>
@@ -182,3 +225,4 @@
   </script>
 </body>
 </html>
+
