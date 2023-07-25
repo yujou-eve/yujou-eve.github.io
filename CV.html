@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Yujou - Personal Website</title>
+  <title>Yujou - Site Web Personnel</title>
   <link rel="stylesheet" href="style.css"> <!-- Import the CSS stylesheet -->
   <style>
+    /* ... existing CSS styles ... */
+
     /* Additional CSS for CV Page */
-    .cv-section ul {
-      padding-left: 20px;
+    body {
+      font-family: "Montserrat", sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
     }
 
-    .cv-section li {
-      margin-bottom: 5px;
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     /* Custom Styles for Tables */
@@ -39,15 +45,15 @@
 <body>
   <nav>
     <ul>
-      <li><a href="https://yujou-eve.github.io/">Accueil</a></li>
-      <li><a href="https://yujou-eve.github.io/Profile">Profil</a></li>
-      <li><a href="https://yujou-eve.github.io/CV">CV</a></li>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Accueil</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profil</a></li>
+      <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
     </ul>
   </nav>
 
   <h1>CV de Yu-Jou</h1>
 
-  <div class="cv-section">
+  <div class="cv-section fade-in-on-load">
     <h2>Formation</h2>
     <table>
       <tr>
@@ -58,7 +64,7 @@
       <!-- Vos détails de formation ici -->
     </table>
   </div>
-  
+
   <div class="cv-section fade-in-on-load">
     <h2>Expérience Professionnelle</h2>
     <table>
@@ -127,6 +133,3 @@
 
 </body>
 </html>
-
-
-
