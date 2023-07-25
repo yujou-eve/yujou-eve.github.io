@@ -26,7 +26,7 @@
     header {
       background-color: #333; /* Dark Gray */
       color: #FFFFFF; /* White */
-      text-align: center;
+      text-align: left; /* 靠左對齊 */
       padding: 30px 0;
       animation: fadeInAnimation 1s ease forwards;
     }
@@ -67,7 +67,7 @@
     nav {
       background-color: #333; /* Dark Gray */
       padding: 10px 0;
-      text-align: center;
+      text-align: left; /* 靠左對齊 */
     }
     
     /* ... existing CSS styles ... */
@@ -75,7 +75,7 @@
     /* Styling for Home Section */
     #home, #profile {
       padding: 40px;
-      text-align: center;
+      text-align: left; /* 靠左對齊 */
       position: relative;
       z-index: 1;
     }
@@ -104,12 +104,12 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
+      text-align: left; /* 靠左對齊 */
     }
 
     th, td {
       padding: 10px;
       border-bottom: 1px solid #ccc;
-      text-align: left;
     }
 
     th {
@@ -119,6 +119,44 @@
     .profile-description {
       padding: 20px 0;
     }
+    
+  /* Additional CSS for Profile Section */
+#profile {
+  margin-top: 40px;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-info img {
+  max-width: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.profile-info th, .profile-info td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.profile-info th {
+  background-color: #f2f2f2;
+}
+
+.profile-description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
   </style>
 </head>
 <body>
@@ -143,9 +181,11 @@
     </div>
   </section>
 
-  <!-- Profile Section -->
-  <section id="profile" class="fade-in-on-load slide-in-animation">
-    <h2 class="scale-on-hover">Profil</h2>
+ <!-- Profile Section -->
+<section id="profile" class="fade-in-on-load slide-in-animation">
+  <h2 class="scale-on-hover">Profil</h2>
+  <div class="profile-info">
+    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
     <table>
       <tr>
         <th>Nom</th>
@@ -163,17 +203,14 @@
         <th>Stage</th>
         <td>CNRS (Centre national de la recherche scientifique)</td>
       </tr>
-      <tr>
-        <th colspan="2">Description</th>
-      </tr>
-      <tr>
-        <td colspan="2" class="profile-description">
-          Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-          J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
-        </td>
-      </tr>
     </table>
-  </section>
+  </div>
+  <p class="profile-description">
+    Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+    J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
+  </p>
+</section>
+
 
   <!-- Contact Me Section -->
   <section id="contact" class="fade-in slide-up-on-hover">
@@ -207,4 +244,5 @@
   </script>
 </body>
 </html>
+
 
