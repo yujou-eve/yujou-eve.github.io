@@ -98,6 +98,27 @@
       transform: scale(1.02); /* 略微放大 */
       transition: box-shadow 0.3s, transform 0.3s; /* 加入平滑過渡效果 */
     }
+
+    /* Additional CSS for Profile Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      text-align: left;
+    }
+
+    .profile-description {
+      padding: 20px 0;
+    }
   </style>
 </head>
 <body>
@@ -122,39 +143,38 @@
     </div>
   </section>
 
- <!-- Profile Section -->
-<section id="profile" class="fade-in-on-load slide-in-animation">
-  <h2 class="scale-on-hover">Profil</h2>
-  <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
-  <table>
-    <tr>
-      <th>Nom</th>
-      <td>YuJou, Ting</td>
-    </tr>
-    <tr>
-      <th>Éducation</th>
-      <td>Université TungHai</td>
-    </tr>
-    <tr>
-      <th>Majeure</th>
-      <td>Langues et Littératures</td>
-    </tr>
-    <tr>
-      <th>Stage</th>
-      <td>CNRS (Centre national de la recherche scientifique)</td>
-    </tr>
-    <tr>
-      <th colspan="2">Description</th>
-    </tr>
-    <tr>
-      <td colspan="2" class="profile-description">
-        Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-        J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
-      </td>
-    </tr>
-  </table>
-</section>
-
+  <!-- Profile Section -->
+  <section id="profile" class="fade-in-on-load slide-in-animation">
+    <h2 class="scale-on-hover">Profil</h2>
+    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
+    <table>
+      <tr>
+        <th>Nom</th>
+        <td>YuJou, Ting</td>
+      </tr>
+      <tr>
+        <th>Éducation</th>
+        <td>Université TungHai</td>
+      </tr>
+      <tr>
+        <th>Majeure</th>
+        <td>Langues et Littératures</td>
+      </tr>
+      <tr>
+        <th>Stage</th>
+        <td>CNRS (Centre national de la recherche scientifique)</td>
+      </tr>
+      <tr>
+        <th colspan="2">Description</th>
+      </tr>
+      <tr>
+        <td colspan="2" class="profile-description">
+          Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+          J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
+        </td>
+      </tr>
+    </table>
+  </section>
 
   <!-- Contact Me Section -->
   <section id="contact" class="fade-in slide-up-on-hover">
