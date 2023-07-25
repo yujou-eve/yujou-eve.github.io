@@ -53,10 +53,22 @@
 
     /* Styling for Home Section */
     #home {
-      background-color: #F0F4F8; /* Pale Blue */
-      color: #001A4D; /* Deep Blue */
+      background-image: url("your-background-image.jpg");
+      background-size: cover;
+      background-position: center;
+      color: #F0F4F8; /* Pale Blue */
       padding: 40px;
       text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    #home h2 {
+      font-size: 36px;
+    }
+
+    #home p {
+      font-size: 18px;
     }
 
     /* ... existing CSS styles ... */
@@ -143,20 +155,23 @@
 <body>
   <header class="fade-in-on-load">
     <h1>YuJou</h1>
+    <p>Welcome to my Personal Website</p>
   </header>
 
   <nav>
     <ul>
-      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Accueil</a></li>
-      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profil</a></li>
+      <li><a href="https://yujou-eve.github.io/" class="scale-on-hover">Home</a></li>
+      <li><a href="https://yujou-eve.github.io/profile" class="scale-on-hover">Profile</a></li>
       <li><a href="https://yujou-eve.github.io/CV" class="scale-on-hover">CV</a></li>
     </ul>
   </nav>
 
   <!-- Home Section -->
   <section id="home" class="fade-in-on-load">
-    <h2>Bienvenue sur mon site Web personnel</h2>
-    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+    <div class="content">
+      <h2>Bienvenue sur mon site Web personnel</h2>
+      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+    </div>
   </section>
 
   <!-- Profile Section -->
@@ -201,6 +216,7 @@
 
 </body>
 </html>
+
 
 
 
