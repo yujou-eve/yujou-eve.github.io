@@ -12,11 +12,114 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
+      background-image: url("your-background-image.jpg");
+      background-size: cover;
+      background-position: center;
       color: #333; /* Dark Gray */
+      background-color: rgba(255, 255, 255, 0.5); /* 透明淡淡的白色背景 */
+      opacity: 0; /* 頁面進場時先設定透明度為0，待動畫播放時再淡入 */
     }
 
     /* ... existing CSS styles ... */
 
+    /* Styling for Header */
+    header {
+      background-color: #333; /* Dark Gray */
+      color: #FFFFFF; /* White */
+      text-align: center; 
+      padding: 30px 0;
+      animation: fadeInAnimation 1s ease forwards;
+    }
+
+    /* ... existing CSS styles ... */
+
+    /* Additional CSS for Animations */
+    .fade-in-on-load {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInOnLoadAnimation 1s ease forwards;
+    }
+
+    @keyframes fadeInOnLoadAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Additional CSS for Slide In Animation */
+    .slide-in-animation {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideInAnimation 1s ease forwards;
+    }
+
+    @keyframes slideInAnimation {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ... existing CSS styles ... */
+
+    /* Styling for Navigation Menu */
+    nav {
+      background-color: #333; /* Dark Gray */
+      padding: 10px 0;
+      text-align: center; 
+    }
+    
+    /* ... existing CSS styles ... */
+
+    /* Styling for Home Section */
+    #home, #profile {
+      padding: 40px;
+      text-align: center; 
+      position: relative;
+      z-index: 1;
+    }
+
+    #home h2, #profile h2 {
+      font-size: 36px;
+      color: #333; /* Dark Gray */
+    }
+
+    #home p, #profile p {
+      font-size: 18px;
+      color: #555; /* Medium Gray */
+    }
+
+    /* ... existing CSS styles ... */
+
+    /* Additional CSS for Hover Effect on Sections */
+    #home:hover, #profile:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
+      transform: scale(1.02); /* 略微放大 */
+      transition: box-shadow 0.3s, transform 0.3s; /* 加入平滑過渡效果 */
+    }
+
+    /* Additional CSS for Profile Table */
+    #profile table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      text-align: center; 
+    }
+
+    #profile th, #profile td {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    #profile th {
+      background-color: #f2f2f2;
+    }
+
+    .profile-description {
+      padding: 20px 0;
+    }
+    
     /* Additional CSS for Profile Section */
     #profile {
       margin-top: 40px;
@@ -32,21 +135,17 @@
       max-width: 150px;
       border-radius: 50%;
       margin-right: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Adding shadow effect */
     }
 
     .profile-info table {
       width: 100%;
       border-collapse: collapse;
       text-align: left;
-      margin-top: 20px;
     }
 
     .profile-info th, .profile-info td {
       padding: 10px;
       border-bottom: 1px solid #ccc;
-      font-size: 18px;
-      color: #333; /* Dark Gray */
     }
 
     .profile-info th {
@@ -61,7 +160,7 @@
   </style>
 </head>
 <body>
-  <header>
+  <header class="fade-in-on-load">
     <h1>YuJou</h1>
     <p>Welcome to my Personal Website</p>
   </header>
@@ -74,7 +173,15 @@
     </ul>
   </nav>
 
-  <!-- Profile Section -->
+  <!-- Home Section -->
+  <section id="home" class="fade-in-on-load slide-in-animation">
+    <div class="content">
+      <h2>Bienvenue sur mon site Web personnel</h2>
+      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+    </div>
+  </section>
+
+ <!-- Profile Section -->
 <section id="profile" class="fade-in-on-load slide-in-animation">
   <h2 class="scale-on-hover">Profil</h2>
   <div class="profile-info">
@@ -104,35 +211,36 @@
   </p>
 </section>
 
-<!-- Contact Me Section -->
-<section id="contact" class="fade-in slide-up-on-hover">
-  <div class="contact-form">
-    <h2>Contactez-moi</h2>
-    <form action="https://formspree.io/f/mpzgwpoj" method="post">
-      <label for="name">Nom :</label>
-      <input type="text" id="name" name="name" required>
-      <label for="email">Email :</label>
-      <input type="email" id="email" name="email" required>
-      <label for="message">Message :</label>
-      <textarea id="message" name="message" required></textarea>
-      <input type="submit" value="Envoyer le Message">
-    </form>
-  </div>
-</section>
 
-<footer>
-  <p>&copy; 2023 YuJou. Tous droits réservés.</p>
-  <p><a href="https://yujou-eve.github.io" target="_blank">Visitez notre site Web</a></p>
-</footer>
+  <!-- Contact Me Section -->
+  <section id="contact" class="fade-in slide-up-on-hover">
+    <div class="contact-form">
+      <h2>Contactez-moi</h2>
+      <form action="https://formspree.io/f/mpzgwpoj" method="post">
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" required></textarea>
+        <input type="submit" value="Envoyer le Message">
+      </form>
+    </div>
+  </section>
 
-<script>
-  // Wait for the whole page to load before executing
-  window.onload = function () {
-    // Get the body element
-    const body = document.querySelector("body");
-    // Fade in the body by changing opacity from 0 to 1, using 1 second animation
-    body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
-  };
-</script>
+  <footer>
+    <p>&copy; 2023 YuJou. Tous droits réservés.</p>
+    <p><a href="https://yujou-eve.github.io" target="_blank">Visitez notre site Web</a></p>
+  </footer>
+
+  <script>
+    // 等待整個頁面載入完畢後再執行
+    window.onload = function () {
+      // 取得 body 元素
+      const body = document.querySelector("body");
+      // 將 body 的透明度從 0 淡入到 1，用時 1 秒
+      body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
+    };
+  </script>
 </body>
 </html>
