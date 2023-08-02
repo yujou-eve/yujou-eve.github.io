@@ -12,14 +12,10 @@
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-image: url("your-background-image.jpg");
-      background-size: cover;
-      background-position: center;
       color: #333; /* Dark Gray */
-      background-color: rgba(255, 255, 255, 0.5); /* 透明淡淡的白色背景 */
-      opacity: 0; /* 頁面進場時先設定透明度為0，待動畫播放時再淡入 */
     }
-/* ... existing CSS styles ... */
+
+    /* ... existing CSS styles ... */
 
     /* Additional CSS for Profile Section */
     #profile {
@@ -129,16 +125,14 @@
   <p><a href="https://yujou-eve.github.io" target="_blank">Visitez notre site Web</a></p>
 </footer>
 
-  <script>
-    // 等待整個頁面載入完畢後再執行
-    window.onload = function () {
-      // 取得 body 元素
-      const body = document.querySelector("body");
-      // 將 body 的透明度從 0 淡入到 1，用時 1 秒
-      body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
-    };
-  </script>
+<script>
+  // Wait for the whole page to load before executing
+  window.onload = function () {
+    // Get the body element
+    const body = document.querySelector("body");
+    // Fade in the body by changing opacity from 0 to 1, using 1 second animation
+    body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
+  };
+</script>
 </body>
 </html>
-
-
