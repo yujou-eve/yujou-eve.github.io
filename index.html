@@ -95,21 +95,37 @@
 
     /* ... existing CSS styles ... */
 
-    /* Styling for Profile Section */
-    #profile {
-      background-color: #FFFFFF; /* White */
-      color: #333; /* Dark Gray */
-      padding: 40px;
-      text-align: center;
-    }
-
-    #profile img {
-      max-width: 200px;
-      border-radius: 2%;
-      margin-bottom: 20px;
-    }
-
     /* ... existing CSS styles ... */
+
+/* Styling for Profile Section */
+#profile {
+  background-color: #FFFFFF; /* White */
+  color: #333; /* Dark Gray */
+  padding: 40px;
+  text-align: center;
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: row; /* 讓內容水平排列 */
+  align-items: center; /* 垂直置中內容 */
+  justify-content: center; /* 水平置中內容 */
+}
+
+.profile-image {
+  flex: 1; /* 占據彈性空間的比例，讓照片佔據左側 */
+  text-align: center;
+  padding: 0 20px; /* 添加間距 */
+}
+
+.profile-text {
+  flex: 2; /* 占據彈性空間的比例，讓文字佔據右側 */
+  text-align: left; /* 調整文字對齊方式 */
+  padding: 0 20px; /* 添加間距 */
+}
+
+/* ... existing CSS styles ... */
+
 
     /* Styling for Contact Me Section */
     #contact {
@@ -202,20 +218,25 @@
     </div>
   </section>
 
+
   <!-- Profile Section -->
-  <section id="profile" class="fade-in-on-load slide-in-animation">
-    <h2 class="scale-on-hover">Profil</h2>
-    <img src="IMG_5701.jpg" alt="Your Profile Picture" class="scale-on-hover">
-    <p>Je suis étudiante à l'Université TungHai dans le département d'art.</p> 
-    <p>En plus de mon intérêt académique pour la littérature et la langue, je possède également une certaine connaissance en technologie de l'information, 
-        en affaires, en droit, en art et en musique.</p> 
-    
-    <p>J'ai obtenu un score de 680 au test GMAT et j'ai un niveau de compétence en anglais équivalent à C2, ainsi qu'un niveau de compétence en français équivalent à C1.</p>  
-    <p>J'ai plus de 15 ans d'expérience dans la pratique du piano et 5 ans de pratique du violon.</p>
-      <p> Maintenant,Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-    </p>
-   
-  </section>
+<section id="profile" class="fade-in-on-load slide-in-animation">
+  <h2 class="scale-on-hover">Profil</h2>
+  <div class="profile-content">
+    <div class="profile-image">
+      <img src="IMG_5701.jpg" alt="Your Profile Picture" class="scale-on-hover">
+    </div>
+    <div class="profile-text">
+      <p>Je suis étudiante à l'Université TungHai dans le département d'art.</p>
+      <p>En plus de mon intérêt académique pour la littérature et la langue, je possède également une certaine connaissance en technologie de l'information, 
+          en affaires, en droit, en art et en musique.</p> 
+      <p>J'ai obtenu un score de 680 au test GMAT et j'ai un niveau de compétence en anglais équivalent à C2, ainsi qu'un niveau de compétence en français équivalent à C1.</p>  
+      <p>J'ai plus de 15 ans d'expérience dans la pratique du piano et 5 ans de pratique du violon.</p>
+      <p> Maintenant,Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.</p>
+    </div>
+  </div>
+</section>
+
 
   <!-- CNRS Section -->
   <section id="cnrs" class="fade-in-on-load slide-in-animation">
