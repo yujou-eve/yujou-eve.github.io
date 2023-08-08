@@ -115,8 +115,12 @@
   flex: 1; /* 占據彈性空間的比例，讓照片佔據左側 */
   text-align: center;
   padding: 0 20px; /* 添加間距 */
-  border-radius: 2;
 }
+.profile-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 2; /* 移除橢圓邊框 */
 
 .profile-text {
   flex: 2; /* 占據彈性空間的比例，讓文字佔據右側 */
