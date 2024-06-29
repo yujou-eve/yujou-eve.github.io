@@ -1,39 +1,34 @@
 <!DOCTYPE html>
-<html> 
+<html>
 <head>
   <title>Yujou - Site Web Personnel</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* ... existing CSS styles ... */
+    /* 重新設定網站的整體風格和設計 */
 
-    /* Additional CSS for Profile Page */
     body {
-      font-family: "Montserrat", sans-serif;
+      background-image: url("IMG_5701.jpg"); /* 背景圖片 */
+      background-size: cover;
+      background-position: center;
       max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      background-image: url("your-background-image.jpg");
-      background-size: cover;
-      background-position: center;
-      color: #333; /* Dark Gray */
+      font-family: sans-serif;
+      color: #333; /* 深灰色 */
       background-color: rgba(255, 255, 255, 0.5); /* 透明淡淡的白色背景 */
       opacity: 0; /* 頁面進場時先設定透明度為0，待動畫播放時再淡入 */
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Styling for Header */
+    /* 頁眉的設計 */
     header {
-      background-color: #333; /* Dark Gray */
-      color: #FFFFFF; /* White */
-      text-align: center; 
+      background-color: #333; /* 深灰色 */
+      color: #FFFFFF; /* 白色 */
+      text-align: center;
       padding: 30px 0;
-      animation: fadeInOnLoadAnimation 1s ease forwards;
+      animation: fadeInAnimation 1s ease forwards;
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Additional CSS for Animations */
+    /* 加載時的動畫效果 */
     .fade-in-on-load {
       opacity: 0;
       transform: translateY(10px);
@@ -47,7 +42,7 @@
       }
     }
 
-    /* Additional CSS for Slide In Animation */
+    /* 滑入動畫 */
     .slide-in-animation {
       opacity: 0;
       transform: translateY(30px);
@@ -61,102 +56,81 @@
       }
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Styling for Navigation Menu */
+    /* 導航菜單的設計 */
     nav {
-      background-color: #333; /* Dark Gray */
+      background-color: #333; /* 深灰色 */
       padding: 10px 0;
-      text-align: center; 
+      text-align: center;
     }
-    
-    /* ... existing CSS styles ... */
 
-    /* Styling for Home Section */
-    #home, #profile {
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 10px;
+    }
+
+    nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #555; /* 中灰色 */
+    }
+
+    /* 每個節的設計 */
+    section {
       padding: 40px;
-      text-align: center; 
       position: relative;
       z-index: 1;
+      margin-bottom: 20px;
+      background-color: #FFFFFF; /* 白色 */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
     }
 
-    #home h2, #profile h2 {
+    section h2 {
       font-size: 36px;
-      color: #333; /* Dark Gray */
-    }
-
-    #home p, #profile p {
-      font-size: 18px;
-      color: #555; /* Medium Gray */
-    }
-
-    /* ... existing CSS styles ... */
-
-    /* Additional CSS for Hover Effect on Sections */
-    #home:hover, #profile:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
-      transform: scale(1.02); /* 略微放大 */
-      transition: box-shadow 0.3s, transform 0.3s; /* 加入平滑過渡效果 */
-    }
-
-    /* Additional CSS for Profile Table */
-    #profile table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      text-align: center; 
-    }
-
-    #profile th, #profile td {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    #profile th {
-      background-color: #f2f2f2;
-    }
-
-    .profile-description {
-      padding: 20px 0;
-    }
-    
-    /* Additional CSS for Profile Section */
-    #profile {
-      margin-top: 40px;
-    }
-
-    .profile-info {
-      display: flex;
-      align-items: center;
+      color: #333; /* 深灰色 */
       margin-bottom: 20px;
     }
 
-    .profile-info img {
-      max-width: 150px;
-      border-radius: 50%;
-      margin-right: 20px;
+    section p {
+      font-size: 18px;
+      color: #555; /* 中灰色 */
     }
 
-    .profile-info table {
+    /* 表格的設計 */
+    table {
       width: 100%;
       border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #ddd;
       text-align: left;
     }
 
-    .profile-info th, .profile-info td {
-      padding: 10px;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .profile-info th {
+    th {
       background-color: #f2f2f2;
     }
 
-    .profile-description {
-      font-size: 18px;
-      line-height: 1.6;
+    /* 懸停效果 */
+    .section:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
     }
-
   </style>
 </head>
 <body>
@@ -174,60 +148,56 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" class="fade-in-on-load slide-in-animation">
-    <div class="content">
-      <h2>Bienvenue sur mon site Web personnel</h2>
-      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
-    </div>
+  <section id="home" class="section fade-in-on-load slide-in-animation">
+    <h2>Bienvenue sur mon site Web personnel</h2>
+    <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
   </section>
 
- <!-- Profile Section -->
-<section id="profile" class="fade-in-on-load slide-in-animation">
-  <h2 class="scale-on-hover">Profil</h2>
-  <div class="profile-info">
-    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
-    <table>
-      <tr>
-        <th>Nom</th>
-        <td>YuJou, Ting</td>
-      </tr>
-      <tr>
-        <th>Éducation</th>
-        <td>Université TungHai</td>
-      </tr>
-      <tr>
-        <th>Majeure</th>
-        <td>Langues et Littératures</td>
-      </tr>
-      <tr>
-        <th>Stage</th>
-        <td>CNRS (Centre national de la recherche scientifique)</td>
-      </tr>
-    </table>
-  </div>
-  <p class="profile-description">
-    Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-    J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
-  </p>
-</section>
-
-  <!-- Contact Me Section -->
-  <section id="contact" class="fade-in slide-up-on-hover">
-    <div class="contact-form">
-      <h2>Contactez-moi</h2>
-      <form action="https://formspree.io/f/mpzgwpoj" method="post">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message :</label>
-        <textarea id="message" name="message" required></textarea>
-        <input type="submit" value="Envoyer le Message">
-      </form>
+  <!-- Profile Section -->
+  <section id="profile" class="section fade-in-on-load slide-in-animation">
+    <h2>Profil</h2>
+    <div class="profile-info">
+      <img src="your-profile-image.jpg" alt="Your Profile Picture" style="max-width: 150px; border-radius: 50%; margin-right: 20px;">
+      <table>
+        <tr>
+          <th>Nom</th>
+          <td>YuJou, Ting</td>
+        </tr>
+        <tr>
+          <th>Éducation</th>
+          <td>Université TungHai</td>
+        </tr>
+        <tr>
+          <th>Majeure</th>
+          <td>Langues et Littératures</td>
+        </tr>
+        <tr>
+          <th>Stage</th>
+          <td>CNRS (Centre national de la recherche scientifique)</td>
+        </tr>
+      </table>
     </div>
+    <p class="profile-description">
+      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+      J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures.
+    </p>
   </section>
 
-  <footer>
+  <!-- Contact Section -->
+  <section id="contact" class="section fade-in-on-load slide-in-animation">
+    <h2>Contactez-moi</h2>
+    <form action="https://formspree.io/f/mpzgwpoj" method="post">
+      <label for="name">Nom :</label>
+      <input type="text" id="name" name="name" required>
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message :</label>
+      <textarea id="message" name="message" required></textarea>
+      <input type="submit" value="Envoyer le Message">
+    </form>
+  </section>
+
+  <footer class="fade-in-on-load">
     <p>&copy; 2023 YuJou. Tous droits réservés.</p>
     <p><a href="https://yujou-eve.github.io" target="_blank">Visitez notre site Web</a></p>
   </footer>
