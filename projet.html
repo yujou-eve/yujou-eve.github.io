@@ -249,32 +249,33 @@
         profileDescription: "I am an intern at CNRS (National Center for Scientific Research), working on the EVOGRAM project. I graduated from Tunghai University with a degree in Languages and Literature."
       },
       zh: {
-        homeTitle: "歡迎來到我的個人網站",
-        homeContent: "我是丁予柔，台灣東海大學外國語文學系的學生。",
-        profileTitle: "個人資料",
-        profileNameLabel: "姓名",
-        profileName: "YuJou, Ting",
-        profileEducationLabel: "教育",
-        profileEducation: "東海大學",
-        profileMajorLabel: "專業",
-        profileMajor: "外國語言與文學",
-        profileInternshipLabel: "實習",
-        profileInternship: "CNRS（國家科學研究中心）”,
-profileDescription: “我是CNRS（國家科學研究中心）的實習生，參與EVOGRAM項目。我畢業於東海大學，獲得語言與文學學位。”
+        homeTitle: "欢迎来到我的个人网站",
+        homeContent: "我叫YuJou, Ting。我是台湾东海大学语言文学专业的学生。",
+        profileTitle: "个人资料",
+        profileNameLabel: "姓名”,
+        profileName: “YuJou, Ting”,
+        profileEducationLabel: “教育”,
+        profileEducation: “东海大学”,
+        profileMajorLabel: “专业”,
+        profileMajor: “语言与文学”,
+        profileInternshipLabel: “实习”,
+        profileInternship: “CNRS（国家科学研究中心）”,
+        profileDescription: “我是CNRS（国家科学研究中心）的实习生，参与EVOGRAM项目。我毕业于东海大学，获得语言与文学学位。”
 },
-fr: {
-homeTitle: “Bienvenue sur mon site Web personnel”,
-homeContent: “Je m’appelle YuJou, Ting. Je suis étudiante en langues et littératures à l’Université de Tunghai, à Taiwan.”,
-profileTitle: “Profil”,
-profileNameLabel: “Nom”,
-profileName: “YuJou, Ting”,
-profileEducationLabel: “Éducation”,
-profileEducation: “Université TungHai”,
-profileMajorLabel: “Majeure”,
-profileMajor: “Langues et Littératures”,
-profileInternshipLabel: “Stage”,
-profileInternship: “CNRS (Centre national de la recherche scientifique)”,
-profileDescription: “Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM. J’ai obtenu mon diplôme de l’Université TungHai avec une licence en Langues et Littératures.”
+      fr: {
+        homeTitle: “Bienvenue sur mon site Web personnel”,
+        homeContent: “Je m’appelle YuJou, Ting. Je suis étudiante en langues et littératures à l’Université de Tunghai, à Taiwan.”,
+        profileTitle: “Profil”,
+        profileNameLabel: “Nom”,
+        profileName: “YuJou, Ting”,
+        profileEducationLabel: “Éducation”,
+        profileEducation: “Université TungHai”,
+        profileMajorLabel: “Majeure”,
+        profileMajor: “Langues et Littératures”,
+        profileInternshipLabel: “Stage”,
+        profileInternship: “CNRS (Centre national de la recherche scientifique)”,
+        profileDescription: “Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM. J’ai obtenu mon diplôme de     
+        l’Université TungHai avec une licence en Langues et Littératures.”
 }
 };
 
@@ -298,6 +299,15 @@ window.onload = function () {
   const body = document.querySelector("body");
   body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
 };
+
+// Debugging
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('DOM fully loaded and parsed');
+});
+
+window.addEventListener('load', function() {
+  console.log('All resources finished loading');
+});
 
   </script>
 </body>
