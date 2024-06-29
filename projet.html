@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html> 
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yujou - Site Web Personnel</title>
-  <link rel="stylesheet" href="style.css"> 
+  <link rel="stylesheet" href="style.css">
   <style>
-    /* ... existing CSS styles ... */
-
-    /* Additional CSS for Profile Page */
     body {
       font-family: "Montserrat", sans-serif;
       max-width: 800px;
@@ -15,25 +14,19 @@
       background-image: url("your-background-image.jpg");
       background-size: cover;
       background-position: center;
-      color: #333; /* Dark Gray */
-      background-color: rgba(255, 255, 255, 0.5); /* 透明淡淡的白色背景 */
-      opacity: 0; /* 頁面進場時先設定透明度為0，待動畫播放時再淡入 */
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.5);
+      opacity: 0;
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Styling for Header */
     header {
-      background-color: #333; /* Dark Gray */
-      color: #FFFFFF; /* White */
-      text-align: center; 
+      background-color: #333;
+      color: #FFFFFF;
+      text-align: center;
       padding: 30px 0;
       animation: fadeInAnimation 1s ease forwards;
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Additional CSS for Animations */
     .fade-in-on-load {
       opacity: 0;
       transform: translateY(10px);
@@ -47,7 +40,6 @@
       }
     }
 
-    /* Additional CSS for Slide In Animation */
     .slide-in-animation {
       opacity: 0;
       transform: translateY(30px);
@@ -61,50 +53,56 @@
       }
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Styling for Navigation Menu */
     nav {
-      background-color: #333; /* Dark Gray */
+      background-color: #333;
       padding: 10px 0;
-      text-align: center; 
+      text-align: center;
     }
-    
-    /* ... existing CSS styles ... */
 
-    /* Styling for Home Section */
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+
     #home, #profile {
       padding: 40px;
-      text-align: center; 
+      text-align: center;
       position: relative;
       z-index: 1;
     }
 
     #home h2, #profile h2 {
       font-size: 36px;
-      color: #333; /* Dark Gray */
+      color: #333;
     }
 
     #home p, #profile p {
       font-size: 18px;
-      color: #555; /* Medium Gray */
+      color: #555;
     }
 
-    /* ... existing CSS styles ... */
-
-    /* Additional CSS for Hover Effect on Sections */
     #home:hover, #profile:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加陰影效果 */
-      transform: scale(1.02); /* 略微放大 */
-      transition: box-shadow 0.3s, transform 0.3s; /* 加入平滑過渡效果 */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      transform: scale(1.02);
+      transition: box-shadow 0.3s, transform 0.3s;
     }
 
-    /* Additional CSS for Profile Table */
     #profile table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 20px;
-      text-align: center; 
+      text-align: center;
     }
 
     #profile th, #profile td {
@@ -118,11 +116,8 @@
 
     .profile-description {
       padding: 20px 0;
-    }
-    
-    /* Additional CSS for Profile Section */
-    #profile {
-      margin-top: 40px;
+      font-size: 18px;
+      line-height: 1.6;
     }
 
     .profile-info {
@@ -156,7 +151,6 @@
       font-size: 18px;
       line-height: 1.6;
     }
-
   </style>
 </head>
 <body>
@@ -173,46 +167,51 @@
     </ul>
   </nav>
 
-  <!-- Home Section -->
+  <div class="language-selector" style="text-align: center; margin: 20px;">
+    <label for="language">Choose a language:</label>
+    <select id="language">
+      <option value="en">English</option>
+      <option value="zh">中文</option>
+      <option value="fr">Français</option>
+    </select>
+  </div>
+
   <section id="home" class="fade-in-on-load slide-in-animation">
     <div class="content">
-      <h2>Bienvenue sur mon site Web personnel</h2>
-      <p>Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
+      <h2 id="home-title">Bienvenue sur mon site Web personnel</h2>
+      <p id="home-content">Je m'appelle YuJou, Ting. Je suis étudiante en langues et littératures à l'Université de Tunghai, à Taiwan.</p>
     </div>
   </section>
 
- <!-- Profile Section -->
-<section id="profile" class="fade-in-on-load slide-in-animation">
-  <h2 class="scale-on-hover">Profil</h2>
-  <div class="profile-info">
-    <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
-    <table>
-      <tr>
-        <th>Nom</th>
-        <td>YuJou, Ting</td>
-      </tr>
-      <tr>
-        <th>Éducation</th>
-        <td>Université TungHai</td>
-      </tr>
-      <tr>
-        <th>Majeure</th>
-        <td>Langues et Littératures</td>
-      </tr>
-      <tr>
-        <th>Stage</th>
-        <td>CNRS (Centre national de la recherche scientifique)</td>
-      </tr>
-    </table>
-  </div>
-  <p class="profile-description">
-    Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
-    J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
-  </p>
-</section>
+  <section id="profile" class="fade-in-on-load slide-in-animation">
+    <h2 class="scale-on-hover" id="profile-title">Profil</h2>
+    <div class="profile-info">
+      <img src="your-profile-image.jpg" alt="Your Profile Picture" class="scale-on-hover">
+      <table>
+        <tr>
+          <th id="profile-name-label">Nom</th>
+          <td id="profile-name">YuJou, Ting</td>
+        </tr>
+        <tr>
+          <th id="profile-education-label">Éducation</th>
+          <td id="profile-education">Université TungHai</td>
+        </tr>
+        <tr>
+          <th id="profile-major-label">Majeure</th>
+          <td id="profile-major">Langues et Littératures</td>
+        </tr>
+        <tr>
+          <th id="profile-internship-label">Stage</th>
+          <td id="profile-internship">CNRS (Centre national de la recherche scientifique)</td>
+        </tr>
+      </table>
+    </div>
+    <p class="profile-description" id="profile-description">
+      Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM.
+      J'ai obtenu mon diplôme de l'Université TungHai avec une licence en Langues et Littératures. 
+    </p>
+  </section>
 
-
-  <!-- Contact Me Section -->
   <section id="contact" class="fade-in slide-up-on-hover">
     <div class="contact-form">
       <h2>Contactez-moi</h2>
@@ -234,13 +233,73 @@
   </footer>
 
   <script>
-    // 等待整個頁面載入完畢後再執行
-    window.onload = function () {
-      // 取得 body 元素
-      const body = document.querySelector("body");
-      // 將 body 的透明度從 0 淡入到 1，用時 1 秒
-      body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
-    };
+    const translations = {
+      en: {
+        homeTitle: "Welcome to My Personal Website",
+        homeContent: "My name is YuJou, Ting. I am a student of languages and literature at Tunghai University, Taiwan.",
+        profileTitle: "Profile",
+        profileNameLabel: "Name",
+        profileName: "YuJou, Ting",
+        profileEducationLabel: "Education",
+        profileEducation: "Tunghai University",
+        profileMajorLabel: "Major",
+        profileMajor: "Languages and Literature",
+        profileInternshipLabel: "Internship",
+        profileInternship: "CNRS (National Center for Scientific Research)",
+        profileDescription: "I am an intern at CNRS (National Center for Scientific Research), working on the EVOGRAM project. I graduated from Tunghai University with a degree in Languages and Literature."
+      },
+      zh: {
+        homeTitle: "歡迎來到我的個人網站",
+        homeContent: "我是丁予柔，台灣東海大學外國語文學系的學生。",
+        profileTitle: "個人資料",
+        profileNameLabel: "姓名",
+        profileName: "YuJou, Ting",
+        profileEducationLabel: "教育",
+        profileEducation: "東海大學",
+        profileMajorLabel: "專業",
+        profileMajor: "外國語言與文學",
+        profileInternshipLabel: "實習",
+        profileInternship: "CNRS（國家科學研究中心）”,
+profileDescription: “我是CNRS（國家科學研究中心）的實習生，參與EVOGRAM項目。我畢業於東海大學，獲得語言與文學學位。”
+},
+fr: {
+homeTitle: “Bienvenue sur mon site Web personnel”,
+homeContent: “Je m’appelle YuJou, Ting. Je suis étudiante en langues et littératures à l’Université de Tunghai, à Taiwan.”,
+profileTitle: “Profil”,
+profileNameLabel: “Nom”,
+profileName: “YuJou, Ting”,
+profileEducationLabel: “Éducation”,
+profileEducation: “Université TungHai”,
+profileMajorLabel: “Majeure”,
+profileMajor: “Langues et Littératures”,
+profileInternshipLabel: “Stage”,
+profileInternship: “CNRS (Centre national de la recherche scientifique)”,
+profileDescription: “Je suis stagiaire au CNRS (Centre National de la recherche scientifique), travaillant sur le projet EVOGRAM. J’ai obtenu mon diplôme de l’Université TungHai avec une licence en Langues et Littératures.”
+}
+};
+
+document.getElementById('language').addEventListener('change', function() {
+  const selectedLanguage = this.value;
+  document.getElementById('home-title').innerText = translations[selectedLanguage].homeTitle;
+  document.getElementById('home-content').innerText = translations[selectedLanguage].homeContent;
+  document.getElementById('profile-title').innerText = translations[selectedLanguage].profileTitle;
+  document.getElementById('profile-name-label').innerText = translations[selectedLanguage].profileNameLabel;
+  document.getElementById('profile-name').innerText = translations[selectedLanguage].profileName;
+  document.getElementById('profile-education-label').innerText = translations[selectedLanguage].profileEducationLabel;
+  document.getElementById('profile-education').innerText = translations[selectedLanguage].profileEducation;
+  document.getElementById('profile-major-label').innerText = translations[selectedLanguage].profileMajorLabel;
+  document.getElementById('profile-major').innerText = translations[selectedLanguage].profileMajor;
+  document.getElementById('profile-internship-label').innerText = translations[selectedLanguage].profileInternshipLabel;
+  document.getElementById('profile-internship').innerText = translations[selectedLanguage].profileInternship;
+  document.getElementById('profile-description').innerText = translations[selectedLanguage].profileDescription;
+});
+
+window.onload = function () {
+  const body = document.querySelector("body");
+  body.style.animation = "fadeInOnLoadAnimation 1s ease forwards";
+};
+
   </script>
 </body>
 </html>
+```
